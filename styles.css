@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+
+  header ul {
+    display: flex;
+    margin-top: 2%;
+    -webkit-animation: anim-up 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both 3s;
+    animation: anim-up 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both 3s;
+}
+
+header li {
+    list-style: none;
+    margin-left: 5%;
+    font-size: 20px;
+    position: relative;
+}
+  
+header li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: all .5s;
+}
+
+
+
+header li:hover::after {
+    width: 100%;
+}
+
+header .last {
+    margin-left: auto;
+    margin-right: 5%;
+    font-size: 25px;
+    text-shadow: 0 0 10px #00FFFF;
+    font-weight: 500;
+}
+
+header .last::after {
+    background: transparent;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+    visibility: hidden;    
+    
+}
+
+
+
+.welcome h1 {
+    font-weight: 100;
+    -webkit-animation: anim-right 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both .5s;
+    animation: anim-right 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both .5s;
+}
+
+.welcome h2 {
+    font-weight: 300;
+    -webkit-animation: anim-left 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both .5s;
+    animation: anim-left 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both .5s;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.new {
+    margin-left: 5%;
+    width: 50%;
+    height: 150px;
+    -webkit-animation: anim-left2 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both 4.5s;
+    animation: anim-left2 1.8s cubic-bezier(0.08, 0.82, 0.17, 1) both 4.5s;
+}
+
+.new h2 {
+    margin-bottom: 2%;
+}
+
+.new .btn {
+    background: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: all .2s;
+    
+}
+
+.new .btn:hover {
+    padding: 10px 20px;
+}
+
+@keyframes anim-right {
+    0% {
+        visibility: visible;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anim-left {
+    0% {
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anim-up {
+    0% {
+        visibility: visible;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anim-left2 {
+    0% {
+        visibility: visible;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
